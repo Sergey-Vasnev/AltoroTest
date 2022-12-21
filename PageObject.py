@@ -8,30 +8,35 @@ class searchLocators: #locators class
     SEARCH_COMMENTS = (By.NAME, "comments") #creates locator for Question/Comment field
     SUBMIT_BUTTON = (By.NAME, "submit") #creates locator for Your Name field
 
+
+
 class Feedback(BasePage):
-    def enter_name(self,name): #find Your Name field and enter  data
-        name_field = self.find_element(searchLocators.SEARCH_FIELD_YOUR_NAME) #find Your Name field by its "name" value
-        name_field.click() #click on found field to activate typing
-        name_field.send_keys(name) #type data in field
+    def enter_name(self,name): #find Your Name field, clicks on it and types data in it
+        name_field = self.find_element(searchLocators.SEARCH_FIELD_YOUR_NAME)
+        name_field.click()
+        name_field.send_keys(name)
         return name_field
 
-    def enter_email(self,email):#find Your Email Address field and enter  data
-        enter_email = self.find_element(searchLocators.SEARCH_FIELD_YOUR_EMAIL)#find Your Email Address field by its "name" value
-        enter_email.click() #click on found field to activate typing
-        enter_email.send_keys(email) #type data in field
+    def enter_email(self,email):#find Your Email Address field, clicks on it and types data in it
+        enter_email = self.find_element(searchLocators.SEARCH_FIELD_YOUR_EMAIL)
+        enter_email.click()
+        enter_email.send_keys(email)
         return enter_email
 
-    def enter_subject(self,subject):
-        enter_subject = self.find_element(searchLocators.SEARCH_SUBJECT) #find Subject field by its "name" value
-        enter_subject.click() #click on found field to activate typing
-        enter_subject.send_keys(subject) #type data in field
+    def enter_subject(self,subject): #finds Subject field, clicks on it and types data in it
+        enter_subject = self.find_element(searchLocators.SEARCH_SUBJECT) #
+        enter_subject.click()
+        enter_subject.send_keys(subject)
         return enter_subject
 
-    def enter_comments(self,comments):
-        enter_comments = self.find_element(searchLocators.SEARCH_COMMENTS) #find Question/Comment field by its "name" value
-        enter_comments.click() #click on found field to activate typing
-        enter_comments.send_keys(comments) #type data in field
+    def enter_comments(self,comments): #finds Question/Comment field, clicks on it and types data
+        enter_comments = self.find_element(searchLocators.SEARCH_COMMENTS)
+        enter_comments.click()
+        enter_comments.send_keys(comments)
         return enter_comments
 
     def click_on_the_submit_button(self): #submit data
-        return self.find_element(searchLocators.SUBMIT_BUTTON, time=1).click() #finds element "submit" and clicks on it
+        return self.find_element(searchLocators.SUBMIT_BUTTON, time=1).click() #finds element "submit" with searchLocators and clicks on it
+
+
+
