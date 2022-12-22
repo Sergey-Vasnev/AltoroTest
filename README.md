@@ -28,6 +28,7 @@ to see more information about tests
 
 This program runs 2 tests. The first one goes to feedback form, fills out only Your Name field, submits data and checks if we stayed on the same page or not. As the result this test is considered as failed due to websites logic which does not stops user from sending invalid data.
 The second test tries to find the potential for XSS vulnerability. The program fills out Your Name filed with simple JavaScript command calling for an alert messege and submit data to the server. As the result our program catches the alert messege and is marked as 'passed'.
+![Alt-текст](https://github.com/Sergey-Vasnev/AltoroTest/blob/main/alert.png)
 
 ![Alt-текст](https://github.com/Sergey-Vasnev/AltoroTest/blob/main/result.png)
 
