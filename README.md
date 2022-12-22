@@ -71,7 +71,7 @@ class BasePage: #create class for a base page we are going to work with
         return check_url
 ```
 
-In the PageObject.py file we implement functions that are going to imitate user's actions during the tests themselves in the Feedback class. searchLocators class contains the locators, that are going to be used by oyr Feedback functions
+In the PageObject.py file we implement functions that are going to imitate user's actions during the tests themselves in the Feedback class. searchLocators class contains the locators, that are going to be used by our Feedback functions
 ```pytnon
 from BaseApp import BasePage
 from selenium.webdriver.common.by import By
