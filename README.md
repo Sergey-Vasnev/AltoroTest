@@ -3,8 +3,8 @@ Automated testing of Feedback form from Altoro Mutual
 
 This program automates 2 tests for Feedback form on Altoro Mutual website (*http://testfire.net/feedback.jsp*)
 
-1. [How to use the program and run tests](#How-to-use)
-2. [How does it works?](#How-it-works?)
+1. [How to use the program and run tests](#how-to-use-the-program-and-run-tests)
+2. [How does it works?](#how-does-it-works)
 
 ## How to use the program and run tests
 
