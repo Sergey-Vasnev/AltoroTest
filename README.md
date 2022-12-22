@@ -3,10 +3,10 @@ Automated testing of Feedback form from Altoro Mutual
 
 This program automates 2 tests for Feedback form on Altoro Mutual website (*http://testfire.net/feedback.jsp*)
 
-1. [How to use the program and run tests](How-to-use-the-program-and-run-tests)
-2. [How does it works?](How-does-it-works?)
+1. [How to use the program and run tests](#How-to-use)
+2. [How does it works?](#How-it-works?)
 
-# How to use the program and run tests
+## How to use the program and run tests
 
 I'm going to use selenium and pytest libraries for this program. You could install them via terminal
 ```
@@ -33,7 +33,7 @@ The second test tries to find the potential for XSS vulnerability. The program f
 
 _____
 
-# How does it works?
+## How does it works?
 
 Firstly, we have pytest reserved conftest.py file for fixtures where we are going to implement initialization for WebDriver. 
 
