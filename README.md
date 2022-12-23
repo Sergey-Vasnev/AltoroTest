@@ -4,7 +4,7 @@ Automated testing of Feedback form from Altoro Mutual
 This program automates 2 tests for Feedback form on Altoro Mutual website (*http://testfire.net/feedback.jsp*)
 
 1. [How to use the program and run tests](#how-to-use-the-program-and-run-tests)
-2. [How does it works?](#how-does-it-works)
+2. [How does it work?](#how-does-it-work)
 
 ## How to use the program and run tests
 
@@ -34,7 +34,7 @@ The second test tries to find the potential for XSS vulnerability. The program f
 
 _____
 
-## How does it works?
+## How does it work?
 
 Firstly, we have pytest reserved conftest.py file for fixtures where we are going to implement initialization for WebDriver. 
 
