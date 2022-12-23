@@ -6,7 +6,7 @@ class searchLocators: #locators class
     SEARCH_FIELD_YOUR_EMAIL = (By.NAME, "email_addr") #creates locator for Your Email Address field
     SEARCH_SUBJECT = (By.NAME, "subject") #creates locator for YSubject field
     SEARCH_COMMENTS = (By.NAME, "comments") #creates locator for Question/Comment field
-    SUBMIT_BUTTON = (By.NAME, "submit") #creates locator for Your Name field
+    SUBMIT_BUTTON = (By.NAME, "submit") #creates locator for submit button
 
 
 

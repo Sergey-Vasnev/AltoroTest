@@ -4,6 +4,6 @@ def test_altoro_feedback_only_name(browser,mainPage=Tests()): #tests if we can't
     result = mainPage.func(browser, 'Sergey',t=2)
     assert result
 
-def test_altoro_feedback_JS(browser,mainPage=Tests()): #test if we can call for a JS alert window through Your Name field
+def test_altoro_feedback_JS(browser,mainPage=Tests()): #test whether we can call for a JS alert window through Your Name field
     result = mainPage.func(browser,"<script>alert('attack')</script>",t=1)
     assert result
