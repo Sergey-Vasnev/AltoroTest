@@ -1,18 +1,14 @@
 from BasePage import BasePage
 from selenium.webdriver.common.by import By
 import logging
-import os
-logging.basicConfig(level = logging.DEBUG)
-logger = logging.getLogger('Test')
-class Logg:
-    def __init__(self):
-        file_name = os.path.join(r'C:\Users\vasne\PycharmProjects\AltoroTest','test.log')  # usually I keep the LOGGING_DIR defined in some global settings file
-        handler = logging.FileHandler(file_name)
-        handler.setLevel(logging.DEBUG)
-        logger.addHandler(handler)
-        logging.basicConfig(level=logging.INFO, filename="test.log", filemode="w")
-    def do_smth(self,text):
-        logger.debug(text)
+from importlib import reload
+logging.shutdown()
+reload(logging)
+logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w")
+
+
+
+
 
 class Feedback(BasePage):
     SEARCH_FIELD_YOUR_NAME = (By.NAME, "name")  # creates locator for Your Name field
@@ -22,8 +18,8 @@ class Feedback(BasePage):
     SUBMIT_BUTTON = (By.NAME, "submit")  # creates locator for submit button
     def enter_name(self,name): #find Your Name field, clicks on it and types data in it
         name_field = self.find_element(self.SEARCH_FIELD_YOUR_NAME)
-        logger = Logg()
-        logger.do_smth("test")
+        logger = logging.getLogger()
+        logger.info("1")
         name_field.click()
         name_field.send_keys(name)
         return name_field
