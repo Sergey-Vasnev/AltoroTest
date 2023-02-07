@@ -1,5 +1,5 @@
 import selenium
-from PageObject import Feedback #imports Feedback class and functions from PageObject
+from FeedbackTestPage import Feedback #imports Feedback class and functions from PageObject
 from selenium.common.exceptions import NoAlertPresentException
 
 

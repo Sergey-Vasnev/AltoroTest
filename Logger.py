@@ -1,11 +1,11 @@
 import logging
 
 class Logg():
-    logging.basicConfig(level=logging.INFO, filename="py_log.log", filemode="w")
-    def __init__(self):
-        self.logger = logging.getLogger()
-
+    def __init__(self, name):
+        self.logger = logging.getLogger(name)
+        logging.basicConfig(level=logging.INFO, filename=f'{name}.log', filemode="w")
+    #@staticmethod
     def makeLog(self,text):
-        self.logger.info(text)
+        self.logger.info(msg=text)
 
 
