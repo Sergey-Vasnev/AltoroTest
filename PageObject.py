@@ -1,15 +1,8 @@
 from BasePage import BasePage
 from selenium.webdriver.common.by import By
-import logging
-from importlib import reload
-logging.shutdown()
-reload(logging)
-logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="a")
+from Logger import Logg
 
-
-
-
-
+logger = Logg()
 class Feedback(BasePage):
     SEARCH_FIELD_YOUR_NAME = (By.NAME, "name")  # creates locator for Your Name field
     SEARCH_FIELD_YOUR_EMAIL = (By.NAME, "email_addr")  # creates locator for Your Email Address field
@@ -18,8 +11,7 @@ class Feedback(BasePage):
     SUBMIT_BUTTON = (By.NAME, "submit")  # creates locator for submit button
     def enter_name(self,name): #find Your Name field, clicks on it and types data in it
         name_field = self.find_element(self.SEARCH_FIELD_YOUR_NAME)
-        logger = logging.getLogger()
-        logger.info("2")
+        logger.makeLog("2")
         name_field.click()
         name_field.send_keys(name)
         return name_field
