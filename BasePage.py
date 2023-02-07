@@ -1,13 +1,12 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class Browser:
+
+
+class BasePage(): #create class for a base page we are going to work with
     def __init__(self,driver):
         self.driver=driver
         self.base_url = "http://testfire.net/feedback.jsp"
-class BasePage: #create class for a base page we are going to work with
-
-
     def find_element(self, locator, time = 10): #creates special element finding function
         return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(locator),
                                                       message=f"Can't find element by locator {locator}") #with imported webdriverwait function waits till it finds locator element
