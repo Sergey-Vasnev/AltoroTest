@@ -4,7 +4,7 @@ import logging
 from importlib import reload
 logging.shutdown()
 reload(logging)
-logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w")
+logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="a")
 
 
 
@@ -19,7 +19,7 @@ class Feedback(BasePage):
     def enter_name(self,name): #find Your Name field, clicks on it and types data in it
         name_field = self.find_element(self.SEARCH_FIELD_YOUR_NAME)
         logger = logging.getLogger()
-        logger.info("1")
+        logger.info("2")
         name_field.click()
         name_field.send_keys(name)
         return name_field
