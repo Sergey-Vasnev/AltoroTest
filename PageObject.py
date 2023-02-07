@@ -10,6 +10,7 @@ class Logg:
         handler = logging.FileHandler(file_name)
         handler.setLevel(logging.DEBUG)
         logger.addHandler(handler)
+        logging.basicConfig(level=logging.INFO, filename="test.log", filemode="w")
     def do_smth(self,text):
         logger.debug(text)
 
