@@ -7,8 +7,11 @@ class BasePage(): #create class for a base page we are going to work with
     def __init__(self,driver):
         self.driver=driver
         self.base_url = "http://testfire.net/feedback.jsp"
+        self.uniqLocator=""
     def find_element(self, locator, time = 5): #creates special element finding function
         return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(locator)) #with imported webdriverwait function waits till it finds locator element
+    def find_elements(self, locator, time = 5): #creates special element finding function
+        return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(locator))
     def go_to_site(self):
         return self.driver.get(self.base_url) #returns the base_url value
 
