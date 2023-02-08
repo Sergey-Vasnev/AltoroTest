@@ -5,9 +5,9 @@ import Singleton
 class Driver():
     @staticmethod
     def chooseDriver(browser_name):
-        if browser_name == "chrome":
+        if browser_name == "edge":
             print("\nstart chrome browser for test..")
-            return webdriver.Chrome()
+            return webdriver.Edge()
         elif browser_name == "firefox":
             print("\nstart firefox browser for test..")
             browser = webdriver.Firefox()
