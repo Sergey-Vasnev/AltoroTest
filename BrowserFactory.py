@@ -1,8 +1,8 @@
 import pytest
 from selenium import webdriver
-import Singleton
+from Singleton import Singleton
 
-class Driver():
+class Driver(metaclass=Singleton):
     @staticmethod
     def chooseDriver(browser_name):
         if browser_name == "edge":
@@ -14,6 +14,5 @@ class Driver():
             return browser
         else:
             raise pytest.UsageError("--browser_name should be chrome or firefox")
-
 
 

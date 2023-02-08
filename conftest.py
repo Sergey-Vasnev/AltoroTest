@@ -8,8 +8,10 @@ def pytest_addoption(parser):
 def browser(request):
     browser_name = request.config.getoption("browser_name")
     print(browser_name)
-    browser = Driver.chooseDriver(request.config.getoption("browser_name"),)
-    print (browser, type(browser))
+    browser = Driver.chooseDriver(request.config.getoption("browser_name"))
+    browserFake = Driver.chooseDriver(request.config.getoption("browser_name"))
+    print (hex(id(browserFake)))
+    print(hex(id(browser)))
     yield browser
     print("\nquit browser..")
     browser.quit()
